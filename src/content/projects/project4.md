@@ -1,9 +1,9 @@
 ---
-title: "Website Popkoor Singing Beat"
-description: "Een platform voor alle leden van het koor om te reperteren en te communiceren"
-stack: "Laravel (PHP) + MySQL"
-pubDate: "18 junuari 2023"
-heroImage: "/popkoor.webp"
+title: "Simpel posts app"
+description: "Een webapp waarin je posts online kunt zetten en beheren"
+stack: "React + Typescript + Expres.js + MongoDB"
+pubDate: "3 februari 2023"
+heroImage: ""
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
