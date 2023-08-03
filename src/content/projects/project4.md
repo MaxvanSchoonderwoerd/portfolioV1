@@ -1,17 +1,28 @@
 ---
-title: "Simpel posts app"
+title: "Post App"
 description: "Een webapp waarin je posts online kunt zetten en beheren"
-stack: "React + Typescript + Expres.js + MongoDB"
+stack: "MongoDB + Express.js + React.js + Node.js + Typescript"
 pubDate: "3 februari 2023"
-heroImage: ""
+heroImage: "/prg6.png"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+Voor programmeren 6 kreeg ik de opdracht om een webapp te maken met gebruik van de MERN tech stack. De mern stack bevat MongoDB, Express.js, React.js en Node.js. De opdracht bestond uit 2 delen: de back-end en de front-end. Wat je precies kon posten op je webapp was zelf te bepalen. Ik zelf had gekozen voor een vrij platform met "posts" Een posts bevat een gebruikersnaam, titel en beschrijving.
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+Tijdens het eerste deel kregen we de opdracht om een RESTful webserver te maken met Express.js Node.js en MongoDB, hiervoor kregen we onze eige Ubuntu server om dit op de doen (VPS server) In principe was de opdracht om een API te maken die voeldoet aan RESTful richtlijnen: de api moest aangestuurd worden met HTTP requests zoals GET, POST, DELETE en DELETE. Verder moest de API ook de juiste responses terug geven zoals 200: succes, 404 not found, 500 server error etc. De back-end hield in:
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+- CRUD (Create, Read, Update, Delete)
+- Connectie met een MongoDB voor het opslaan van de posts
+- Pagination, het inladen van max. 12 posts met pagina
+- Details in kunnen laden per post (collectie weergaven en detail weergave)
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+Voor het tweede deel van deze cursus was het tijd voor de front-end. Dit diende gemaakt te worden met React, een Javascript framework. Ik heb toen ook gekozen om React te combineren met Typescript en Vite. Typescript zorgt ervoor dat je minder "domme" fouten maakt doordat het type-checking toevoegd aan Javascript. Dit heeft mij heel erg geholpen tijdens het programmeren, doordat het mij bijvoorbeeld beter liet nadenken over welke soort types in welke functies gaan, en welke types eruit komen. Vite heeft mij erg geholpen doordat je ermee gemakkelijk een React + Typescript project kan beginnen. Verder bevat het een live server en een manier om je React project te "builden" zodat het online gezet kan worden.
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+De front-end van deze webapp moest een gebruiksvriendelijke en professioneel uitziende UI bevatten voor het interacteren met de API die we hadden gemaakt in het eerste deel van de opdracht. Verder diende React vollop gebruikt te worden, door onderandere UseState variables te gebruiken in combinatie met Components. Een aantal features van de front-end:
+
+- Een gebruiksvriendelijke en professionele UI gemaakt met puur CSS
+- Overzicht pagina met een form om posts toetevoegen
+- Detail pagina waar posts geupdate kunnen worden
+- Navigatie om door de pagina's met posts te kunnen gaan
+- Hover over een post om hem te verwijderen
+
+Voor een volledige uitleg en visuele demonstratie van de webapp, klik [hier](https://youtu.be/cJ7AANP0Deg) voor de video
