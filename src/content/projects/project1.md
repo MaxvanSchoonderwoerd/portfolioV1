@@ -6,10 +6,10 @@ pubDate: "30 juni 2023"
 heroImage: "/prg7edit.png"
 ---
 
-Voor programmeren 7 kreeg ik de opdracht om een mobiele app te maken met React native en Expo. In deze app moest een map view gemaakt worden en een lijst weergave om bepaalde plekken te vinden in de buurt van de gebruiker. Samen met de gps locatie kunnen de plekken gevonden worden. Wat voor soort plekken of "hotspots" te vinden waren in de app, was zelf te bepalen.
+Voor Programmeren 7 kreeg ik de opdracht om een mobiele app te ontwikkelen met behulp van React Native en Expo. Deze app moest zowel een kaartweergave als een lijstweergave bevatten om specifieke locaties in de buurt van de gebruiker te kunnen vinden. Door gebruik te maken van de GPS-locatie kunnen deze locaties worden geïdentificeerd. Het soort locaties of "hotspots" dat in de app te vinden zou zijn, was naar eigen keuze.
 
-Voor de hotspots heb ik gekozen voor mooie uitzicht punten in Rotterdam en een paar andere plekken in Nederland. Deze worden ingeladen met een JSON bestand, en kunnen vanaf de lijst weergave of de interactieve kaart bekeken worden
+Voor de hotspots heb ik gekozen voor prachtige uitkijkpunten in Rotterdam en enkele andere locaties in Nederland. Deze worden ingeladen via een JSON-bestand en kunnen worden bekeken vanuit zowel de lijstweergave als de interactieve kaart.
 
-Andere features van de app zijn: het kunnen opslaan van favoriete locaties, light en dark mode en verschillende talen. Deze settings kunnen worden aangepast door de gebruiker en worden opgeslagen in LocalStorage.
+Andere functies van de app zijn onder andere het kunnen opslaan van favoriete locaties, zowel een lichte als donkere modus, en ondersteuning voor verschillende talen. Deze instellingen kunnen door de gebruiker worden aangepast en worden opgeslagen in LocalStorage.
 
-Bekijk [de video](https://youtu.be/Tx2YDquUA-k) voor meer details.
+Bekijk [de video](https://youtu.be/Tx2YDquUA-k) voor een volledige rondleiding door de app, samen met een korte uitleg over hoe ik dit ontwikkeld heb.
