@@ -4,6 +4,7 @@ description: "Een mobile app dat locatie gegevens gebruikt om jou te begeleiden 
 stack: "React native + Expo"
 pubDate: "30 juni 2023"
 heroImage: "/prg7edit.png"
+badge: "NEW"
 ---
 
 Voor Programmeren 7 kreeg ik de opdracht om een mobiele app te ontwikkelen met behulp van React Native en Expo. Deze app moest zowel een kaartweergave als een lijstweergave bevatten om specifieke locaties in de buurt van de gebruiker te kunnen vinden. Door gebruik te maken van de GPS-locatie kunnen deze locaties worden geïdentificeerd. Het soort locaties of "hotspots" dat in de app te vinden zou zijn, was naar eigen keuze.
