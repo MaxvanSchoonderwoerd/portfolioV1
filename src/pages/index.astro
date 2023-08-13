@@ -38,7 +38,7 @@ const last_posts = posts.slice(0, 3);
   {
     last_posts.map((post) => (
       <>
-        <HorizontalCard title={post.data.title} img={post.data.heroImage} desc={post.data.description} url={"/projects/" + post.slug} target="_self" badge={post.data.badge} />
+        <HorizontalCard title={post.data.title} img={post.data.heroImage} desc={post.data.description} stack={post.data.stack} url={"/projects/" + post.slug} target="_self" badge={post.data.badge} />
         <div class="divider my-0" />
       </>
     ))
