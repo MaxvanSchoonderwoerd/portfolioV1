@@ -2,7 +2,6 @@
 import SideBarFooter from "./SideBarFooter.astro";
 import { Image } from "@astrojs/image/components";
 import SideBarMenu from "./SideBarMenu.astro";
-import pfPrimary from "../assets/pf_primary.png";
 const { sideBarActiveItemID } = Astro.props;
 ---
 
@@ -13,7 +12,7 @@ const { sideBarActiveItemID } = Astro.props;
       <a href="/">
         <div class="avatar transition ease-in-out hover:scale-[102%] block m-auto">
           <div class="w-[8.5rem]">
-            <Image class="mask mask-circle" src={pfPrimary} width={300} height={300} alt="Profile image" />
+            <img class="mask mask-circle" src="/pf_primary.png" alt="Profile image" width="300" height="300" />
           </div>
         </div>
       </a>
