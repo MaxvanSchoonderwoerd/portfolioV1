@@ -20,4 +20,4 @@ De app maakt gebruik van Text-to-Speech, spraakherkenning en GPT-3.5. Voor de fr
 
 Klik [hier](https://cmgt.hr.nl/projecten/gewoonlezen) voor meer informatie, en een uitleg video van de app.
 
-![screenshot van app](/public/GewoonLezenScreenshot.webp)
+![screenshot van app](/GewoonLezenScreenshot.webp)
