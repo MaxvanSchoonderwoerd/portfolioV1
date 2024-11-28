@@ -1,5 +1,5 @@
 ---
-title: "Website Popkoor Singing Beat"
+title: "Oefenplatform Popkoor Singing Beat"
 description: "Een platform voor alle leden van het koor om te repeteren en te communiceren."
 stack: "Laravel (PHP) + MySQL"
 pubDate: "18 januari 2023"
@@ -28,4 +28,4 @@ Op de nieuwe website die we hebben gebouwd, hebben we dit proces aanzienlijk ver
 
 Verder kunnen op de website foto's worden geüpload en gedownload, en is het mogelijk om aankondigingen te plaatsen. Deze nieuwe functies en verbeteringen in gebruiksvriendelijkheid gaan gepaard met een compleet nieuwe vormgeving en stijl, zowel voor desktop als mobiel.
 
-![popkoor](../../../../../public/popkoor%202.webp)
+![popkoor](/public/popkoor%202.webp)
