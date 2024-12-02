@@ -16,7 +16,7 @@ GewoonLezen is een webapplicatie die zowel op mobiele apparaten als op desktops 
 - Eerdere gemaakte fouten door de gebruiker.
 - Het onderwerp van de voorgaande zinnen.
 
-De app maakt gebruik van Text-to-Speech, spraakherkenning en GPT-3.5. Voor de frontend is gebruikgemaakt van React en TypeScript, terwijl voor de backend Next.js in combinatie met de OpenAI API is toegepast. Binnen dit project lag mijn verantwoordelijkheid bij zowel het ontwerpen als het ontwikkelen van de app.
+De app maakt gebruik van Text-to-Speech, spraakherkenning en GPT-3.5. Voor de frontend is gebruikgemaakt van React en TypeScript, terwijl voor de backend Express.js in combinatie met de OpenAI API is toegepast. Binnen dit project lag mijn verantwoordelijkheid bij zowel het ontwerpen als het ontwikkelen van de app.
 
 Klik [hier](https://cmgt.hr.nl/projecten/gewoonlezen) voor meer informatie, en een uitleg video van de app.
 
