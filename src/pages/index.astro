@@ -4,7 +4,9 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 
 // Fetch and sort posts by publication date (descending)
-const posts = (await getCollection("projects")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const posts = (await getCollection("projects")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
 
 // Take the first 3 posts
 
@@ -13,8 +15,10 @@ const sortedPosts = [...posts]
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()) // Sort by date
   .sort((a, b) => {
     // Prioritize items with the "HIGHLIGHTED" badge
-    if (a.data.badge === "HIGHLIGHTED" && b.data.badge !== "HIGHLIGHTED") return -1;
-    if (a.data.badge !== "HIGHLIGHTED" && b.data.badge === "HIGHLIGHTED") return 1;
+    if (a.data.badge === "HIGHLIGHTED" && b.data.badge !== "HIGHLIGHTED")
+      return -1;
+    if (a.data.badge !== "HIGHLIGHTED" && b.data.badge === "HIGHLIGHTED")
+      return 1;
 
     // If both have (or don't have) "HIGHLIGHTED", sort by date (most recent first)
     return b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
@@ -24,32 +28,53 @@ const last_posts = sortedPosts.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-  <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">Ik ben Max van Schoonderwoerd</div>
-    <div class="text-3xl py-3 font-bold">Student Creative Media and Gaming Technologies aan de Hogeschool Rotterdam</div>
-    <div class="py-2">
-      <text class="text-lg">Programmeur en ontwerper van creatieve oplossingen</text>
+  <div class="p-6 pt-10 max-w-[900px]">
+    <div class="pb-12 mt-5">
+      <div class="text-xl py-1">Hey there 👋</div>
+      <div class="text-5xl font-bold">Ik ben Max van Schoonderwoerd</div>
+      <div class="text-3xl py-3 font-bold">
+        Student Creative Media and Gaming Technologies aan de Hogeschool
+        Rotterdam
+      </div>
+      <div class="py-2">
+        <text class="text-lg"
+          >Programmeur en ontwerper van creatieve oplossingen</text
+        >
+      </div>
+      <div class="mt-8">
+        <a
+          href="mailto::maxvanschoonderwoerd@gmail.com"
+          target="_blank"
+          class="btn btn-primary ml-5">Laten we samenwerken!</a
+        >
+      </div>
     </div>
+
+    <div>
+      <div class="text-3xl w-full font-bold mb-2">
+        Recente projecten {"</>"}
+      </div>
+    </div>
+
+    {
+      // Render sorted posts
+      last_posts.map((post) => (
+        <>
+          <HorizontalCard
+            title={post.data.title}
+            img={post.data.heroImage}
+            desc={post.data.description}
+            stack={post.data.stack}
+            url={"/projects/" + post.slug}
+            target="_self"
+            badge={post.data.badge}
+          />
+          <div class="divider my-0" />
+        </>
+      ))
+    }
     <div class="mt-8">
-      <a href="mailto::maxvanschoonderwoerd@gmail.com" target="_blank" class="btn btn-primary ml-5">Laten we samenwerken!</a>
+      <a href="/projects" class="btn btn-primary ml-5">Alle projecten</a>
     </div>
-  </div>
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-2">Recente projecten {"</>"}</div>
-  </div>
-
-  {
-    // Render sorted posts
-    last_posts.map((post) => (
-      <>
-        <HorizontalCard title={post.data.title} img={post.data.heroImage} desc={post.data.description} stack={post.data.stack} url={"/projects/" + post.slug} target="_self" badge={post.data.badge} />
-        <div class="divider my-0" />
-      </>
-    ))
-  }
-  <div class="mt-8">
-    <a href="/projects" class="btn btn-primary ml-5">Alle projecten</a>
   </div>
 </BaseLayout>
