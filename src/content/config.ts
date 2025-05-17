@@ -8,6 +8,8 @@ const projectsSchema = z.object({
   updatedDate: z.string().optional(),
   heroImage: z.string().optional(),
   badge: z.string().optional(),
+  screenshotsDesktop: z.array(z.string()).optional(),
+  screenshotsMobile: z.array(z.string()).optional(),
 });
 
 const storeSchema = z.object({
