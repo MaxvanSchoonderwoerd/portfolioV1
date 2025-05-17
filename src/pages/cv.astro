@@ -4,80 +4,140 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Profiel</div>
-  </div>
-
-  <div class="mb-10 text-justify">Hallo, ik ben Max van Schoonderwoerd. Studerend aan de Hogeschool Rotterdam op de opleiding Creative media and game technologies. Mijn werk ervaring valt vooral onder bijbaantjes in de horeca en retail, maar ik zou graag willen beginnen in het vakgebied van mijn opleiding.</div>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Educatie</div>
-  </div>
-
-  <div class="time-line-container grid gap-4 mb-10">
-    <TimeLineElement title="Minor Interface & User Experience Design" subtitle="2024 tot heden, Hogeschool Rotterdam, Rotterdam" />
-    <TimeLineElement title="Stage fullstack webdevelopment" subtitle="september 2023 tot februari 2024, ROX, Rotterdam" />
-    <TimeLineElement title="HBO Creative media and game technologies" subtitle="2020 tot heden, Hogeschool Rotterdam, Rotterdam" />
-    <TimeLineElement title="HAVO middelbare school" subtitle="2014 tot 2019, Insula college, Dordrecht" />
-  </div>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Werk ervaringen</div>
-  </div>
-
-  <div class="time-line-container mb-10">
-    <TimeLineElement title="Huis aan huis ICT hulp" subtitle="Vanaf februari 2024 tot heden bij Student aan Huis" />
-    <TimeLineElement title="Game tester/youth advisor" subtitle="Vanaf september 2023 tot februari 2024 voor Radboud Universiteit" />
-    <TimeLineElement title="Digital agency stage webdevelopment (fullstack)" subtitle="Vanaf september 2023 tot februari 2024 bij ROX" />
-    <TimeLineElement title="Bouwmarkt medewerker" subtitle="Vanaf juli 2021 tot mei 2023 bij Karwei Dordrecht" />
-    <TimeLineElement title="(Hulp)kok" subtitle="Vanaf september 2019 tot februari 2021 bij Bastion hotel Dordrecht" />
-    <TimeLineElement title="Vulploeg medewerker" subtitle="mei	2018	tot oktober	2018 bij Plus Dordrecht" />
-  </div>
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Vaardigheden</div>
-  </div>
-
-  <div class="flex space-x-10">
-    <!-- Programmeren -->
-    <div class="flex flex-col">
-      <div class="text-xl font-semibold mb-3">Code</div>
-      <ul class="list-disc md:row-5 row-2 mx-6">
-        <li>React</li>
-        <li>React native</li>
-        <li>Javascript</li>
-        <li>Typescript</li>
-        <li>GIT/GitHub</li>
-        <li>MERN stack</li>
-        <li>PHP</li>
-        <li>Laravel</li>
-        <li>HTML</li>
-        <li>CSS</li>
-      </ul>
+  <div class="p-6 pt-10 max-w-[900px]">
+    <div class="mb-5">
+      <div class="text-3xl w-full font-bold">Profiel</div>
     </div>
 
-    <!-- Ontwerpen -->
-    <div class="flex flex-col">
-      <div class="text-xl font-semibold mb-3">Design</div>
-      <ul class="list-disc md:row-5 row-2 mx-6">
-        <li>UX/UI Design</li>
-        <li>Figma</li>
-        <li>User testing and research</li>
-      </ul>
+    <div class="mb-10 text-justify">
+      Hallo, ik ben Max van Schoonderwoerd. Studerend aan de Hogeschool
+      Rotterdam op de opleiding Creative media and game technologies. Mijn werk
+      ervaring valt vooral onder bijbaantjes in de horeca en retail, maar ik zou
+      graag willen beginnen in het vakgebied van mijn opleiding.
     </div>
 
-    <!-- Overig -->
-    <div class="flex flex-col">
-      <div class="text-xl font-semibold mb-3">Overig</div>
-      <ul class="list-disc md:row-5 row-2 mx-6">
-        <li>Vloeient in Nederlands & Engels</li>
-        <li>Geven van feedback</li>
-        <li>ICT support</li>
-        <li>Les geven ICT</li>
-        <li>Windows/MacOS</li>
-        <li>Ios/Android</li>
-        <li>Music production</li>
-        <li>Sound design</li>
-      </ul>
+    <div class="mb-5">
+      <div class="text-3xl w-full font-bold">Educatie</div>
+    </div>
+
+    <div class="time-line-container grid gap-4 mb-10">
+      <TimeLineElement
+        title="Afstudeerstage Elephant/InDordrecht"
+        subtitle="Vanaf februari 2025 tot heden bij Elephant"
+      />
+      <TimeLineElement
+        title="Minor Interface & User Experience Design"
+        subtitle="2024 tot heden, Hogeschool Rotterdam, Rotterdam"
+      />
+      <TimeLineElement
+        title="Stage fullstack webdevelopment"
+        subtitle="september 2023 tot februari 2024, ROX, Rotterdam"
+      />
+      <TimeLineElement
+        title="HBO Creative media and game technologies"
+        subtitle="2020 tot heden, Hogeschool Rotterdam, Rotterdam"
+      />
+      <TimeLineElement
+        title="HAVO middelbare school"
+        subtitle="2014 tot 2019, Insula college, Dordrecht"
+      />
+    </div>
+
+    <div class="mb-5">
+      <div class="text-3xl w-full font-bold">Werkervaringen</div>
+    </div>
+
+    <div class="time-line-container mb-10">
+      <TimeLineElement
+        title="Afstudeerstage Elephant/InDordrecht"
+        subtitle="Vanaf februari 2025 tot heden bij Elephant"
+      />
+      <TimeLineElement
+        title="Huis aan huis ICT hulp"
+        subtitle="Vanaf februari 2024 tot heden bij Student aan Huis"
+      />
+      <TimeLineElement
+        title="Game tester/youth advisor"
+        subtitle="Vanaf september 2023 tot februari 2024 voor Radboud Universiteit"
+      />
+      <TimeLineElement
+        title="Digital agency stage webdevelopment (fullstack)"
+        subtitle="Vanaf september 2023 tot februari 2024 bij ROX"
+      />
+      <TimeLineElement
+        title="Bouwmarkt medewerker"
+        subtitle="Vanaf juli 2021 tot mei 2023 bij Karwei Dordrecht"
+      />
+      <TimeLineElement
+        title="(Hulp)kok"
+        subtitle="Vanaf september 2019 tot februari 2021 bij Bastion hotel Dordrecht"
+      />
+      <TimeLineElement
+        title="Vulploeg medewerker"
+        subtitle="mei	2018	tot oktober	2018 bij Plus Dordrecht"
+      />
+    </div>
+    <div class="mb-5">
+      <div class="text-3xl w-full font-bold">Vaardigheden</div>
+    </div>
+
+    <div class="flex space-x-10">
+      <!-- front-end -->
+      <div class="flex flex-col">
+        <div class="text-xl font-semibold mb-3">Front-end</div>
+        <ul class="list-disc md:row-5 row-2 mx-4">
+          <li>React/React native</li>
+          <li>Vue</li>
+          <li>Javascript/Typescript</li>
+          <li>HTML</li>
+          <li>CSS/SCSS</li>
+          <li>Tailwind CSS</li>
+        </ul>
+      </div>
+
+      <!-- back-end -->
+      <div class="flex flex-col">
+        <div class="text-xl font-semibold mb-3">Back-end</div>
+        <ul class="list-disc md:row-5 row-2 mx-4">
+          <li>PHP</li>
+          <li>Laravel</li>
+          <li>Wordpress</li>
+          <li>Node.js</li>
+          <li>MongoDB</li>
+          <li>MySQL</li>
+          <li>OpenAI (GPT)</li>
+        </ul>
+      </div>
+
+      <!-- Ontwerpen -->
+      <div class="flex flex-col">
+        <div class="text-xl font-semibold mb-3">Design</div>
+        <ul class="list-disc md:row-5 row-2 mx-4">
+          <li>UX/UI Design</li>
+          <li>Figma</li>
+          <li>Prototyping</li>
+          <li>User testing</li>
+          <li>User research</li>
+          <li>Design sprints</li>
+        </ul>
+      </div>
+
+      <!-- Overig -->
+      <div class="flex flex-col">
+        <div class="text-xl font-semibold mb-3">Overig</div>
+        <ul class="list-disc md:row-5 row-2 mx-4">
+          <li>Vloeient in Nederlands & Engels</li>
+          <li>Geven van feedback</li>
+          <li>Agile/scrum workflow</li>
+          <li>GIT/GitHub</li>
+          <li>ICT support</li>
+          <li>Les geven ICT</li>
+          <li>Windows/MacOS</li>
+          <li>Ios/Android</li>
+          <li>Music production</li>
+          <li>Sound design</li>
+        </ul>
+      </div>
     </div>
   </div>
 </BaseLayout>
