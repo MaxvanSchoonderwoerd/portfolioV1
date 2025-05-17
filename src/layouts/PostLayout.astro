@@ -2,7 +2,10 @@
 import { ProjectSchema } from "../content/config";
 import BaseLayout from "./BaseLayout.astro";
 import dayjs from "dayjs";
+import "dayjs/locale/nl"; // import Dutch locale
+
 import localizedFormat from "dayjs/plugin/localizedFormat";
+import { Image } from "@astrojs/image/components";
 
 export interface Props extends ProjectSchema {}
 
@@ -17,14 +20,16 @@ const {
   screenshotsMobile,
   screenshotsDesktop,
 } = Astro.props;
+
 dayjs.extend(localizedFormat);
-const displayDate = dayjs(pubDate).format("ll");
-import { Image } from "@astrojs/image/components";
+dayjs.locale("nl"); // set global locale to Dutch
+
+const displayDate = dayjs(pubDate).locale("nl").format("D MMMM YYYY");
+const displayUpdatedDate = updatedDate ? dayjs(updatedDate).format("ll") : null;
 ---
 
-<!-- <Image aspectRatio={"16:9"} width={750} height={422} format="webp" src={heroImage} alt={title} class="w-full mb-6" /> -->
 <BaseLayout title={title} description={description} image={heroImage}>
-  <main class="flex justify-center items-center flex-col jus">
+  <main class="flex justify-center items-center flex-col">
     {
       heroImage && (
         <Image
@@ -44,31 +49,57 @@ import { Image } from "@astrojs/image/components";
         <br />
         {badge && <div class="badge badge-secondary my-1">{badge}</div>}
         {
-          updatedDate && (
+          displayUpdatedDate && (
             <div>
-              {" "}
-              Last updated on <time>{updatedDate}</time>{" "}
+              Last updated on <time>{displayUpdatedDate}</time>
             </div>
           )
         }
 
         <div class="divider my-2"></div>
         <slot />
+
+        <div class="my-6">
+          <h2 class="text-xl font-semibold">Tech Stack</h2>
+          <p>{stack}</p>
+        </div>
       </article>
-      <div class="divider my-8"></div>
-      <h2 class="text-2xl font-bold mb-8">Screenshots</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+
+      <>
         {
-          screenshotsMobile &&
-            screenshotsMobile.map((path) => <img src={path} />)
+          (screenshotsMobile || screenshotsDesktop) && (
+            <>
+              <div class="divider my-8" />
+              <h2 class="text-2xl font-bold mb-8">Screenshots</h2>
+            </>
+          )
         }
-      </div>
-      <div class="grid grid-cols-1 sm:grid-cols-1 gap-4 mt-8">
         {
-          screenshotsDesktop &&
-            screenshotsDesktop.map((path) => <img src={path} />)
+          screenshotsMobile && (
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {screenshotsMobile.map((path, i) => (
+                <img
+                  src={path}
+                  alt={`Mobile screenshot ${i + 1} of ${title}`}
+                />
+              ))}
+            </div>
+          )
         }
-      </div>
+
+        {
+          screenshotsDesktop && (
+            <div class="grid grid-cols-1 sm:grid-cols-1 gap-4 mt-8">
+              {screenshotsDesktop.map((path, i) => (
+                <img
+                  src={path}
+                  alt={`Desktop screenshot ${i + 1} of ${title}`}
+                />
+              ))}
+            </div>
+          )
+        }
+      </>
     </div>
   </main>
 </BaseLayout>
