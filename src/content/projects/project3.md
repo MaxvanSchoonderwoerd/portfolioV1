@@ -4,6 +4,7 @@ description: "Een platform voor alle leden van het koor om te repeteren en te co
 stack: "Laravel (PHP) + MySQL"
 pubDate: "18 januari 2023"
 heroImage: "/popkoor.webp"
+screenshotsDesktop: ["/popkoor 2.webp"]
 ---
 
 Voor TLE1 kreeg ik voor het eerst een team toegewezen waarmee we aan de slag gingen voor ons eerste TLE-project. Tijdens dit project deden we alsof we een webbureau waren en kregen we een opdrachtgever toegewezen. Onze opdrachtgever, een popkoor genaamd "Singing Beat", had een erg verouderde website, wat resulteerde in verminderde communicatie met zowel de buitenwereld als de koorleden.
@@ -26,5 +27,3 @@ Op de nieuwe website die we hebben gebouwd, hebben we dit proces aanzienlijk ver
 - Bestuursleden kunnen nu afspeellijsten maken voor bijvoorbeeld aankomende optredens
 
 Verder kunnen op de website foto's worden geüpload en gedownload, en is het mogelijk om aankondigingen te plaatsen. Deze nieuwe functies en verbeteringen in gebruiksvriendelijkheid gaan gepaard met een compleet nieuwe vormgeving en stijl, zowel voor desktop als mobiel.
-
-![popkoor](/popkoor%202.webp)
