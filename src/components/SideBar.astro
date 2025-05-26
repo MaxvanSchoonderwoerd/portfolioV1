@@ -7,12 +7,34 @@ const { sideBarActiveItemID } = Astro.props;
 
 <div class="drawer-side z-40">
   <label for="my-drawer" class="drawer-overlay"></label>
-  <aside class="px-2 pt-2 h-auto min-h-full w-[19rem] bg-base-200 text-base-content flex flex-col">
+  <aside
+    class="px-2 pt-2 h-auto min-h-full w-[19rem] bg-base-200 text-base-content flex flex-col"
+  >
+    <ul class="menu shrink menu-md overflow-y-auto">
+      <div>
+        <label class="inline-flex items-center cursor-pointer">
+          <input type="checkbox" id="darkmode-toggle" class="sr-only peer" />
+          <div
+            class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"
+          >
+          </div>
+          <span class="ms-3 text-sm font-medium">Dark mode</span>
+        </label>
+      </div>
+    </ul>
     <div class="w-fit mx-auto mt-5 mb-6">
       <a href="/">
-        <div class="avatar transition ease-in-out hover:scale-[102%] block m-auto">
+        <div
+          class="avatar transition ease-in-out hover:scale-[102%] block m-auto"
+        >
           <div class="w-[8.5rem]">
-            <img class="mask mask-circle" src="/pf_primary.png" alt="Profile image" width="300" height="300" />
+            <img
+              class="mask mask-circle"
+              src="/pf_primary.png"
+              alt="Profile image"
+              width="300"
+              height="300"
+            />
           </div>
         </div>
       </a>
@@ -20,4 +42,25 @@ const { sideBarActiveItemID } = Astro.props;
     <SideBarMenu sideBarActiveItemID={sideBarActiveItemID} />
     <SideBarFooter />
   </aside>
+  <script>
+    // Run after DOM is loaded
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.getElementById(
+        "darkmode-toggle"
+      ) as HTMLInputElement | null;
+      const html = document.documentElement;
+
+      // Set toggle state based on saved preference
+      const darkmode = localStorage.getItem("darkmode") === "true";
+      if (toggle) {
+        toggle.checked = darkmode;
+      }
+      html.setAttribute("data-theme", darkmode ? "dark" : "light");
+      toggle?.addEventListener("change", function () {
+        const isDark = toggle.checked;
+        localStorage.setItem("darkmode", isDark ? "true" : "false");
+        html.setAttribute("data-theme", isDark ? "dark" : "light");
+      });
+    });
+  </script>
 </div>
