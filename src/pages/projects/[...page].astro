@@ -12,7 +12,10 @@ export async function getStaticPaths({ paginate }) {
 const { page } = Astro.props;
 ---
 
-<BaseLayout title="Projects" sideBarActiveItemID="projects">
+<BaseLayout
+  title="Max van Schoonderwoerd | Projecten"
+  sideBarActiveItemID="projects"
+>
   <div class="p-6 pt-10 max-w-[900px]">
     <div class="mb-5">
       <div class="text-3xl w-full font-bold">Alle projecten {"</>"}</div>
