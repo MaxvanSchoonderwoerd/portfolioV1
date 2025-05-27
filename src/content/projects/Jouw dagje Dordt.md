@@ -3,10 +3,10 @@ title: "Jouw dagje Dordt"
 description: "Een gepersonaliseerde dagjesplanner voor toeristen van Dordrecht, powered by GPT"
 stack: "Vue.js + Wordpress + OpenAI"
 pubDate: "2025-05-15"
-heroImage: "/JouwDagjeDordt/Desktop hero.png"
+heroImage: "/Images/JouwDagjeDordt/Desktop hero.png"
 badge: "HIGHLIGHTED"
-screenshotsMobile: [ "/JouwDagjeDordt/Mobile Datepicker.png", "/JouwDagjeDordt/Mobile Questions.png", "/JouwDagjeDordt/Mobile Results.png"]
-screenshotsDesktop: ["/JouwDagjeDordt/Desktop questions.png"]
+screenshotsMobile: [ "/Images/JouwDagjeDordt/Mobile Datepicker.png", "/Images/JouwDagjeDordt/Mobile Questions.png", "/Images/JouwDagjeDordt/Mobile Results.png"]
+screenshotsDesktop: ["/Images/JouwDagjeDordt/Desktop questions.png"]
 ---
 Voor mijn afstudeerproject binnen de opleiding Creative Media and Game Technologies heb ik in opdracht van Elephant en Dordrecht Marketing & Partners een persoonlijke dagplanner generator ontwikkeld voor InDordrecht. InDordrecht is een online platform dat bezoekers informeert over evenementen en activiteiten in de stad. Dordrecht Marketing wilde onderzoeken hoe personalisatie en AI ingezet kunnen worden om het bezoek aan de stad aantrekkelijker, langer en relevanter te maken voor verschillende doelgroepen.
 

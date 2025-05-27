@@ -3,7 +3,7 @@ title: "Post App"
 description: "Een webapp waarin je posts online kunt zetten en beheren."
 stack: "MongoDB + Express.js + React.js + Node.js + TypeScript"
 pubDate: "3 februari 2023"
-heroImage: "/prg6.png"
+heroImage: "/Images/PostsApp/prg6.png"
 ---
 
 Voor Programmeren 6 kreeg ik de opdracht om een webapplicatie te maken met gebruik van de MERN tech stack. De MERN-stack bevat MongoDB, Express.js, React.js en Node.js. De opdracht bestond uit 2 delen: de backend en de frontend. Wat je precies kon posten op je webapplicatie was zelf te bepalen. Ikzelf had gekozen voor een vrij platform met "posts". Een post bevat een gebruikersnaam, titel en beschrijving.
