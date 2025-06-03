@@ -4,6 +4,7 @@ description: "Een platform voor producers en artiesten voor het uploaden, vinden
 stack: "Laravel + Blade + Bootstrap"
 pubDate: "2022-10-31"
 heroImage: "/Images/BeatMonkey/Beatmonkey title image.png"
+badge: "HIGHLIGHTED"
 screenshotsDesktop: ["/Images/BeatMonkey/Beatmonkey mockup.png", "/Images/BeatMonkey/Beatmonkey mockup 2.png", "/Images/BeatMonkey/Beatmonkey mockup 3.png"]
 ---
 Naast mijn passie voor techniek en programmeren heb ik ook een grote liefde voor muziek. Zowel het luisteren naar als het maken van muziek behoort tot mijn favoriete bezigheden. Sinds 2017 produceer ik als hobby én bijverdienste muziek voor verschillende artiesten uit de regio Dordrecht.

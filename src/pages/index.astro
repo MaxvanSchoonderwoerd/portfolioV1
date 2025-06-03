@@ -11,18 +11,22 @@ const posts = (await getCollection("projects")).sort(
 // Take the first 3 posts
 
 // Preprocess last_posts to prioritize posts with a badge
-const sortedPosts = [...posts]
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()) // Sort by date
-  .sort((a, b) => {
-    // Prioritize items with the "HIGHLIGHTED" badge
-    if (a.data.badge === "HIGHLIGHTED" && b.data.badge !== "HIGHLIGHTED")
-      return -1;
-    if (a.data.badge !== "HIGHLIGHTED" && b.data.badge === "HIGHLIGHTED")
-      return 1;
+const sortedPosts = [...posts].sort((a, b) => {
+  // 1. Prioritize posts with a "NEW" badge
+  const aIsNew = a.data.badge === "NEW!";
+  const bIsNew = b.data.badge === "NEW!";
+  if (aIsNew && !bIsNew) return -1;
+  if (!aIsNew && bIsNew) return 1;
 
-    // If both have (or don't have) "HIGHLIGHTED", sort by date (most recent first)
-    return b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
-  });
+  // 2. Then prioritize posts with a "HIGHLIGHTED" badge
+  const aIsHighlighted = a.data.badge === "HIGHLIGHTED";
+  const bIsHighlighted = b.data.badge === "HIGHLIGHTED";
+  if (aIsHighlighted && !bIsHighlighted) return -1;
+  if (!aIsHighlighted && bIsHighlighted) return 1;
+
+  // 3. Lastly, posts with no badges (or other badges) sorted by date descending
+  return b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
+});
 
 const last_posts = sortedPosts.slice(0, 3);
 ---
@@ -82,31 +86,31 @@ const last_posts = sortedPosts.slice(0, 3);
           </svg>
         </a>
       </div>
-    </div>
 
-    <div>
-      <div class="text-3xl w-full font-bold mb-2">Recente projecten</div>
-    </div>
+      <div>
+        <div class="text-3xl w-full font-bold mb-2">Recente projecten</div>
+      </div>
 
-    {
-      // Render sorted posts
-      last_posts.map((post) => (
-        <>
-          <HorizontalCard
-            title={post.data.title}
-            img={post.data.heroImage}
-            desc={post.data.description}
-            stack={post.data.stack}
-            url={"/projects/" + post.slug}
-            target="_self"
-            badge={post.data.badge}
-          />
-          <div class="divider my-0" />
-        </>
-      ))
-    }
-    <div class="mt-8">
-      <a href="/projects" class="btn btn-primary ml-5">Alle projecten</a>
+      {
+        // Render sorted posts
+        last_posts.map((post) => (
+          <>
+            <HorizontalCard
+              title={post.data.title}
+              img={post.data.heroImage}
+              desc={post.data.description}
+              stack={post.data.stack}
+              url={"/projects/" + post.slug}
+              target="_self"
+              badge={post.data.badge}
+            />
+            <div class="divider my-0" />
+          </>
+        ))
+      }
+      <div class="mt-8">
+        <a href="/projects" class="btn btn-primary ml-5">Alle projecten</a>
+      </div>
     </div>
   </div>
 </BaseLayout>

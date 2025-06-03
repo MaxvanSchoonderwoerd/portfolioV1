@@ -4,7 +4,7 @@ description: "Een gepersonaliseerde dagjesplanner voor toeristen van Dordrecht, 
 stack: "Vue.js + Wordpress + OpenAI"
 pubDate: "2025-05-15"
 heroImage: "/Images/JouwDagjeDordt/Desktop hero.png"
-badge: "HIGHLIGHTED"
+badge: "NEW!"
 screenshotsMobile: [ "/Images/JouwDagjeDordt/Mobile Datepicker.png", "/Images/JouwDagjeDordt/Mobile Questions.png", "/Images/JouwDagjeDordt/Mobile Results.png"]
 screenshotsDesktop: ["/Images/JouwDagjeDordt/Desktop questions.png"]
 ---
