@@ -76,7 +76,7 @@ const displayUpdatedDate = updatedDate ? dayjs(updatedDate).format("ll") : null;
         }
         {
           screenshotsMobile && (
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-16">
               {screenshotsMobile.map((path, i) => (
                 <img
                   src={path}
@@ -89,7 +89,7 @@ const displayUpdatedDate = updatedDate ? dayjs(updatedDate).format("ll") : null;
 
         {
           screenshotsDesktop && (
-            <div class="grid grid-cols-1 sm:grid-cols-1 gap-4 mt-8">
+            <div class="grid grid-cols-1 sm:grid-cols-1 gap-32 mt-8">
               {screenshotsDesktop.map((path, i) => (
                 <img
                   src={path}
