@@ -1,11 +1,10 @@
 ---
-import { ProjectSchema } from "../content/config";
+import type { ProjectSchema } from "../content.config";
 import BaseLayout from "./BaseLayout.astro";
 import dayjs from "dayjs";
 import "dayjs/locale/nl"; // import Dutch locale
 
 import localizedFormat from "dayjs/plugin/localizedFormat";
-import { Image } from "@astrojs/image/components";
 
 export interface Props extends ProjectSchema {}
 
@@ -32,7 +31,7 @@ const displayUpdatedDate = updatedDate ? dayjs(updatedDate).format("ll") : null;
   <main class="flex justify-center items-center flex-col">
     {
       heroImage && (
-        <Image
+        <img
           src={heroImage}
           width={1920}
           height={1080}
