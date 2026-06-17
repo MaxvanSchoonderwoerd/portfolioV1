@@ -44,8 +44,7 @@ export const ui = {
     "404.back": "Terug naar home",
 
     // Language switcher
-    "lang.switch": "EN",
-    "lang.button": "Switch to",
+    "lang.switch": "Switch to English",
 
     // CV (see cv.ts)
     ...cvUi.nl,
@@ -86,8 +85,7 @@ export const ui = {
     "404.back": "Back to home",
 
     // Language switcher
-    "lang.switch": "NL",
-    "lang.button": "Verander naar",
+    "lang.switch": "Vertaal naar het Nederlands",
 
     // CV (see cv.ts)
     ...cvUi.en,
