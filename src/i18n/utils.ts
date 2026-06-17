@@ -9,10 +9,14 @@ export function getLangFromUrl(url: URL): Lang {
   return defaultLang;
 }
 
+type UIKey = keyof (typeof ui)[typeof defaultLang];
+
 /** Returns a t(key) function bound to the given language, falling back to nl. */
 export function useTranslations(lang: Lang) {
-  return function t(key: keyof (typeof ui)[typeof defaultLang]): string {
-    return ui[lang][key] ?? ui[defaultLang][key];
+  return function t(key: UIKey | (string & {})): string {
+    const dict = ui[lang] as Record<string, string>;
+    const fallback = ui[defaultLang] as Record<string, string>;
+    return dict[key] ?? fallback[key] ?? key;
   };
 }
 
