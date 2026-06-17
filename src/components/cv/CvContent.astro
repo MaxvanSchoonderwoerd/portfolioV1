@@ -1,0 +1,130 @@
+---
+import TimeLineElement from "./TimeLine.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div class="p-6 pt-10 max-w-[900px]">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">{t("cv.profile")}</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    {t("cv.profileText")}
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">{t("cv.workExperience")}</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Junior Software Engineer"
+      subtitle="1 jaar · oktober 2025 tot oktober 2026 · bij Maqqie"
+      highlight
+    />
+    <TimeLineElement
+      title="Afstudeerstage Elephant/InDordrecht"
+      subtitle="4 maanden · februari 2025 tot juni 2025 · bij Elephant"
+    />
+    <TimeLineElement
+      title="Huis aan huis ICT hulp"
+      subtitle="1 jaar · februari 2024 tot februari 2025 · bij Student aan Huis"
+    />
+    <TimeLineElement
+      title="Game tester/youth advisor"
+      subtitle="6 maanden · september 2023 tot februari 2024 · voor Radboud Universiteit"
+    />
+    <TimeLineElement
+      title="Stage fullstack webdevelopment"
+      subtitle="6 maanden · september 2023 tot februari 2024 · bij ROX"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">{t("cv.education")}</div>
+  </div>
+
+  <div class="time-line-container grid mb-10">
+    <TimeLineElement
+      title="Minor Interface & User Experience Design"
+      subtitle="vanaf september 2024 tot februari 2025, Hogeschool Rotterdam, Rotterdam"
+    />
+    <TimeLineElement
+      title="HBO Creative media and game technologies"
+      subtitle="Vanaf september 2020 tot juli 2025, Hogeschool Rotterdam, Rotterdam"
+      highlight
+    />
+    <TimeLineElement
+      title="HAVO middelbare school"
+      subtitle="2014 tot 2019, Insula college, Dordrecht"
+    />
+  </div>
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">{t("cv.skills")}</div>
+  </div>
+
+  <!-- front-end -->
+  <div class="flex space-x-10">
+    <div class="flex flex-col">
+      <div class="text-xl font-semibold mb-3">{t("cv.skills.frontend")}</div>
+      <ul class="list-disc md:row-5 row-2 mx-4">
+        <li>Javascript/Typescript</li>
+        <li>Vue</li>
+        <li>React/React native</li>
+        <li>HTML</li>
+        <li>CSS/SCSS</li>
+        <li>Tailwind CSS</li>
+      </ul>
+    </div>
+
+    <!-- back-end -->
+    <div class="flex flex-col">
+      <div class="text-xl font-semibold mb-3">{t("cv.skills.backend")}</div>
+      <ul class="list-disc md:row-5 row-2 mx-4">
+        <li>Kotlin</li>
+        <li>Spring (boot)</li>
+        <li>PHP</li>
+        <li>Laravel</li>
+        <li>Wordpress</li>
+        <li>Node.js</li>
+        <li>MongoDB</li>
+        <li>MySQL</li>
+        <li>Anthropic Claude Code</li>
+        <li>OpenAI (GPT)</li>
+      </ul>
+    </div>
+
+    <!-- Ontwerpen -->
+    <div class="flex flex-col">
+      <div class="text-xl font-semibold mb-3">{t("cv.skills.design")}</div>
+      <ul class="list-disc md:row-5 row-2 mx-4">
+        <li>UX/UI Design</li>
+        <li>Figma</li>
+        <li>Prototyping</li>
+        <li>User testing</li>
+        <li>User research</li>
+        <li>Design sprints</li>
+      </ul>
+    </div>
+
+    <!-- Overig -->
+    <div class="flex flex-col">
+      <div class="text-xl font-semibold mb-3">{t("cv.skills.other")}</div>
+      <ul class="list-disc md:row-5 row-2 mx-4">
+        <li>Vloeient in Nederlands & Engels</li>
+        <li>Geven van feedback</li>
+        <li>Agile/scrum workflow</li>
+        <li>GIT/GitHub</li>
+        <li>ICT support</li>
+        <li>Les geven ICT</li>
+        <li>Windows/MacOS</li>
+        <li>Ios/Android</li>
+        <li>Music production</li>
+        <li>Sound design</li>
+      </ul>
+    </div>
+  </div>
+</div>

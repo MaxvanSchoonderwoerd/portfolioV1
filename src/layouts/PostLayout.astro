@@ -5,8 +5,13 @@ import dayjs from "dayjs";
 import "dayjs/locale/nl"; // import Dutch locale
 
 import localizedFormat from "dayjs/plugin/localizedFormat";
+import { getLangFromUrl, useTranslations, localizePath } from "../i18n/utils";
 
 export interface Props extends ProjectSchema {}
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const dateLocale = lang === "nl" ? "nl" : "en";
 
 const {
   title,
@@ -21,10 +26,11 @@ const {
 } = Astro.props;
 
 dayjs.extend(localizedFormat);
-dayjs.locale("nl"); // set global locale to Dutch
 
-const displayDate = dayjs(pubDate).locale("nl").format("D MMMM YYYY");
-const displayUpdatedDate = updatedDate ? dayjs(updatedDate).format("ll") : null;
+const displayDate = dayjs(pubDate).locale(dateLocale).format("D MMMM YYYY");
+const displayUpdatedDate = updatedDate
+  ? dayjs(updatedDate).locale(dateLocale).format("ll")
+  : null;
 ---
 
 <BaseLayout title={title} description={description} image={heroImage}>
@@ -41,7 +47,9 @@ const displayUpdatedDate = updatedDate ? dayjs(updatedDate).format("ll") : null;
       )
     }
     <div class="p-6 pt-10 max-w-[900px]">
-      <a href="/projects" class="btn btn-md w-24 mb-4">Terug</a>
+      <a href={localizePath("/projects", lang)} class="btn btn-md w-24 mb-4"
+        >{t("projects.back")}</a
+      >
       <article class="prose prose-lg max-w-[750px]">
         <h1 class="title my-2 text-4xl font-bold">{title}</h1>
         {pubDate && <time>{displayDate}</time>}
@@ -50,7 +58,7 @@ const displayUpdatedDate = updatedDate ? dayjs(updatedDate).format("ll") : null;
         {
           displayUpdatedDate && (
             <div>
-              Last updated on <time>{displayUpdatedDate}</time>
+              {t("post.lastUpdated")} <time>{displayUpdatedDate}</time>
             </div>
           )
         }
@@ -59,7 +67,7 @@ const displayUpdatedDate = updatedDate ? dayjs(updatedDate).format("ll") : null;
         <slot />
 
         <div class="my-6">
-          <h2 class="text-xl font-semibold">Tech Stack</h2>
+          <h2 class="text-xl font-semibold">{t("post.techStack")}</h2>
           <p>{stack}</p>
         </div>
       </article>
@@ -69,7 +77,7 @@ const displayUpdatedDate = updatedDate ? dayjs(updatedDate).format("ll") : null;
           (screenshotsMobile || screenshotsDesktop) && (
             <>
               <div class="divider my-8" />
-              <h2 class="text-2xl font-bold mb-8">Screenshots</h2>
+              <h2 class="text-2xl font-bold mb-8">{t("post.screenshots")}</h2>
             </>
           )
         }
