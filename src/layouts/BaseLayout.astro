@@ -24,13 +24,17 @@ const {
     <script>
       (function () {
         try {
-          const isDark = localStorage.getItem("darkmode") === "true";
-          document.documentElement.setAttribute(
-            "data-theme",
-            isDark ? "dark" : "light"
-          );
+          const mq = window.matchMedia("(prefers-color-scheme: dark)");
+          const apply = (isDark: boolean) =>
+            document.documentElement.setAttribute(
+              "data-theme",
+              isDark ? "dark" : "light"
+            );
+          apply(mq.matches);
+          // React to OS theme changes while the page is open.
+          mq.addEventListener("change", (e) => apply(e.matches));
         } catch (e) {
-          console.warn("Could not set theme from localStorage:", e);
+          console.warn("Could not set theme from system preference:", e);
         }
       })();
     </script>

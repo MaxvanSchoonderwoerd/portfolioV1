@@ -30,7 +30,8 @@ export const ui = {
     "projects.heading": "Alle projecten",
     "projects.back": "Terug",
     "projects.empty.title": "Sorry!",
-    "projects.empty.text": "Er zijn momenteel geen projecten om te tonen. Kom later terug!",
+    "projects.empty.text":
+      "Er zijn momenteel geen projecten om te tonen. Kom later terug!",
     "projects.newer": "Nieuwere projecten",
     "projects.older": "Oudere projecten",
     "post.techStack": "Tech Stack",
@@ -44,6 +45,7 @@ export const ui = {
 
     // Language switcher
     "lang.switch": "EN",
+    "lang.button": "Switch to",
 
     // CV (see cv.ts)
     ...cvUi.nl,
@@ -70,7 +72,8 @@ export const ui = {
     "projects.heading": "All projects",
     "projects.back": "Back",
     "projects.empty.title": "Sorry!",
-    "projects.empty.text": "There are no projects to show at the moment. Check back later!",
+    "projects.empty.text":
+      "There are no projects to show at the moment. Check back later!",
     "projects.newer": "Newer projects",
     "projects.older": "Older projects",
     "post.techStack": "Tech Stack",
@@ -84,6 +87,7 @@ export const ui = {
 
     // Language switcher
     "lang.switch": "NL",
+    "lang.button": "Verander naar",
 
     // CV (see cv.ts)
     ...cvUi.en,
