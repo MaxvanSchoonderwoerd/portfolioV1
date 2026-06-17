@@ -1,9 +1,11 @@
 ---
 import TimeLineElement from "./TimeLine.astro";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import { cvLayout } from "../../i18n/cv";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const { work, education } = cvLayout;
 ---
 
 <div class="p-6 pt-10 max-w-[900px]">
@@ -20,27 +22,15 @@ const t = useTranslations(lang);
   </div>
 
   <div class="time-line-container mb-10">
-    <TimeLineElement
-      title="Junior Software Engineer"
-      subtitle="1 jaar · oktober 2025 tot oktober 2026 · bij Maqqie"
-      highlight
-    />
-    <TimeLineElement
-      title="Afstudeerstage Elephant/InDordrecht"
-      subtitle="4 maanden · februari 2025 tot juni 2025 · bij Elephant"
-    />
-    <TimeLineElement
-      title="Huis aan huis ICT hulp"
-      subtitle="1 jaar · februari 2024 tot februari 2025 · bij Student aan Huis"
-    />
-    <TimeLineElement
-      title="Game tester/youth advisor"
-      subtitle="6 maanden · september 2023 tot februari 2024 · voor Radboud Universiteit"
-    />
-    <TimeLineElement
-      title="Stage fullstack webdevelopment"
-      subtitle="6 maanden · september 2023 tot februari 2024 · bij ROX"
-    />
+    {
+      work.map((entry) => (
+        <TimeLineElement
+          title={t(`${entry.key}.title`)}
+          subtitle={t(`${entry.key}.subtitle`)}
+          highlight={"highlight" in entry && entry.highlight}
+        />
+      ))
+    }
   </div>
 
   <div class="mb-5">
@@ -48,19 +38,15 @@ const t = useTranslations(lang);
   </div>
 
   <div class="time-line-container grid mb-10">
-    <TimeLineElement
-      title="Minor Interface & User Experience Design"
-      subtitle="vanaf september 2024 tot februari 2025, Hogeschool Rotterdam, Rotterdam"
-    />
-    <TimeLineElement
-      title="HBO Creative media and game technologies"
-      subtitle="Vanaf september 2020 tot juli 2025, Hogeschool Rotterdam, Rotterdam"
-      highlight
-    />
-    <TimeLineElement
-      title="HAVO middelbare school"
-      subtitle="2014 tot 2019, Insula college, Dordrecht"
-    />
+    {
+      education.map((entry) => (
+        <TimeLineElement
+          title={t(`${entry.key}.title`)}
+          subtitle={t(`${entry.key}.subtitle`)}
+          highlight={"highlight" in entry && entry.highlight}
+        />
+      ))
+    }
   </div>
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">{t("cv.skills")}</div>
