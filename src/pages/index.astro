@@ -4,14 +4,14 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 
 // Fetch and sort posts by publication date (descending)
-const posts = (await getCollection("projects")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+const latestPosts = (await getCollection("projects")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
 // Take the first 3 posts
 
 // Preprocess last_posts to prioritize posts with a badge
-const sortedPosts = [...posts].sort((a, b) => {
+const sortedPosts = [...latestPosts].sort((a, b) => {
   // 1. Prioritize posts with a "NEW" badge
   const aIsNew = a.data.badge === "NEW!";
   const bIsNew = b.data.badge === "NEW!";
@@ -28,7 +28,7 @@ const sortedPosts = [...posts].sort((a, b) => {
   return b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
 });
 
-const last_posts = sortedPosts.slice(0, 3);
+const posts = sortedPosts.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
@@ -36,10 +36,7 @@ const last_posts = sortedPosts.slice(0, 3);
     <div class="pb-12 mt-5">
       <div class="text-xl py-1">Hey there 👋</div>
       <h1 class="text-5xl font-bold">Ik ben Max van Schoonderwoerd</h1>
-      <div class="text-3xl py-3 font-bold">
-        Student Creative Media and Gaming Technologies aan de Hogeschool
-        Rotterdam
-      </div>
+      <div class="text-3xl py-3 font-bold">Software engineer & UX designer</div>
       <div class="py-2">
         <text class="text-lg"
           >Programmeur en ontwerper van creatieve oplossingen</text
@@ -93,7 +90,7 @@ const last_posts = sortedPosts.slice(0, 3);
 
       {
         // Render sorted posts
-        last_posts.map((post) => (
+        posts.map((post) => (
           <>
             <HorizontalCard
               title={post.data.title}
