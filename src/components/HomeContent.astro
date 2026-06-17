@@ -51,7 +51,7 @@ const posts = sortedPosts.slice(0, 3);
       <a
         href="https://api.whatsapp.com/send?phone=310636553851"
         target="_blank"
-        class="btn bg-[#24d366] ml-5 text-white w-[240px] mt-4 sm:mt-0"
+        class="btn bg-[#24d366] ml-5 text-white w-[240px] mt-4 sm:mt-0 hover:bg-[#1ebe5d] border-none hover:text-white"
         >{t("home.cta.message")}
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +81,9 @@ const posts = sortedPosts.slice(0, 3);
     </div>
 
     <div>
-      <div class="text-3xl w-full font-bold mb-2">{t("home.recentProjects")}</div>
+      <div class="text-3xl w-full font-bold mb-2">
+        {t("home.recentProjects")}
+      </div>
     </div>
 
     {
