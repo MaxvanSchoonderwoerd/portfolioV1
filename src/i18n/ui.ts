@@ -16,7 +16,7 @@ export const ui = {
     "nav.contact": "Contact",
 
     // Home
-    "home.greeting": "Hey there 👋",
+    "home.greeting": "Hallo 👋",
     "home.name": "Ik ben Max van Schoonderwoerd",
     "home.role": "Software engineer & UX designer",
     "home.tagline": "Programmeur en ontwerper van creatieve oplossingen",
