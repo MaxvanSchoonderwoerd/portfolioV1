@@ -1,32 +1,30 @@
 ---
 import HorizontalCard from "./HorizontalCard.astro";
-import { getCollection } from "astro:content";
 import { getLangFromUrl, useTranslations, localizePath } from "../i18n/utils";
+import { getProjects } from "../i18n/projects";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-// Fetch and sort latestPosts by publication date (descending)
-const latestPosts = (await getCollection("projects")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
+// Fetch projects for the active language (already sorted newest first).
+const latestPosts = await getProjects(lang);
 
 // Preprocess posts to prioritize latestPosts with a badge
 const sortedPosts = [...latestPosts].sort((a, b) => {
   // 1. Prioritize posts with a "NEW" badge
-  const aIsNew = a.data.badge === "NEW!";
-  const bIsNew = b.data.badge === "NEW!";
+  const aIsNew = a.entry.data.badge === "NEW!";
+  const bIsNew = b.entry.data.badge === "NEW!";
   if (aIsNew && !bIsNew) return -1;
   if (!aIsNew && bIsNew) return 1;
 
   // 2. Then prioritize latestPosts with a "HIGHLIGHTED" badge
-  const aIsHighlighted = a.data.badge === "HIGHLIGHTED";
-  const bIsHighlighted = b.data.badge === "HIGHLIGHTED";
+  const aIsHighlighted = a.entry.data.badge === "HIGHLIGHTED";
+  const bIsHighlighted = b.entry.data.badge === "HIGHLIGHTED";
   if (aIsHighlighted && !bIsHighlighted) return -1;
   if (!aIsHighlighted && bIsHighlighted) return 1;
 
   // 3. Lastly, latestPosts with no badges (or other badges) sorted by date descending
-  return b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
+  return b.entry.data.pubDate.valueOf() - a.entry.data.pubDate.valueOf();
 });
 
 const posts = sortedPosts.slice(0, 3);
@@ -88,16 +86,16 @@ const posts = sortedPosts.slice(0, 3);
 
     {
       // Render sorted posts
-      posts.map((post) => (
+      posts.map(({ slug, entry }) => (
         <>
           <HorizontalCard
-            title={post.data.title}
-            img={post.data.heroImage}
-            desc={post.data.description}
-            stack={post.data.stack}
-            url={localizePath("/projects/" + post.id, lang)}
+            title={entry.data.title}
+            img={entry.data.heroImage}
+            desc={entry.data.description}
+            stack={entry.data.stack}
+            url={localizePath("/projects/" + slug, lang)}
             target="_self"
-            badge={post.data.badge}
+            badge={entry.data.badge}
           />
           <div class="divider my-0" />
         </>
