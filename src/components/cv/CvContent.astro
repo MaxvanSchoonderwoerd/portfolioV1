@@ -48,12 +48,13 @@ const { work, education } = cvLayout;
       ))
     }
   </div>
+  
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">{t("cv.skills")}</div>
   </div>
 
   <!-- front-end -->
-  <div class="flex space-x-10">
+  <div class="flex flex-col gap-6 md:flex-row md:gap-0 md:space-x-10">
     <div class="flex flex-col">
       <div class="text-xl font-semibold mb-3">{t("cv.skills.frontend")}</div>
       <ul class="list-disc md:row-5 row-2 mx-4">
