@@ -15,7 +15,7 @@ export const ui = {
     "nav.cv": "CV",
     "nav.contact": "Contact",
 
-    "status.jobSeeking": "Open to work",
+    "status.jobSeeking": "Aan het solliciteren",
 
     // Home
     "home.greeting": "Hey 👋",
@@ -58,7 +58,7 @@ export const ui = {
     "nav.cv": "CV",
     "nav.contact": "Contact",
 
-    "status.jobSeeking": "Open to work",
+    "status.jobSeeking": "Looking for work",
 
     // Home
     "home.greeting": "Hey there 👋",
