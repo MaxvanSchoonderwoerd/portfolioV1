@@ -7,6 +7,7 @@ import {
   localizePath,
   getAlternatePath,
 } from "../i18n/utils";
+import { Image } from "astro:assets";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -51,12 +52,13 @@ const { sideBarActiveItemID } = Astro.props;
           class="avatar transition ease-in-out hover:scale-[102%] block m-auto flex justify-center"
         >
           <div class="w-[8.5rem]">
-            <img
+            <Image
               class="mask mask-circle"
               src="/Images/ProfilePictures/Max profile white background square zoom.png"
               alt="Max van Schoonderwoerd profile"
               width="300"
               height="300"
+              loading="eager"
             />
           </div>
         </div>
