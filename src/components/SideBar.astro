@@ -49,12 +49,12 @@ const { sideBarActiveItemID } = Astro.props;
     <div class="w-fit mx-auto mt-5 mb-6">
       <a href={localizePath("/", lang)}>
         <div
-          class="avatar transition ease-in-out hover:scale-[102%] block m-auto"
+          class="avatar transition ease-in-out hover:scale-[102%] block m-auto flex justify-center"
         >
           <div class="w-[8.5rem]">
             <img
-              class="mask mask-circle"
-              src="/Images/ProfilePictures/pf_primary.png"
+              class="mask mask-circle border-4 border-green-500 rounded-full"
+              src="/Images/ProfilePictures/Max profile white background square zoom.png"
               alt="Profile image"
               width="300"
               height="300"
@@ -62,6 +62,19 @@ const { sideBarActiveItemID } = Astro.props;
           </div>
         </div>
       </a>
+      <div
+        class="flex items-center justify-center gap-2 mt-3 text-sm text-base-content/70"
+      >
+        <span class="relative flex h-2.5 w-2.5">
+          <span
+            class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75"
+          ></span>
+          <span
+            class="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500"
+          ></span>
+        </span>
+        {t("status.jobSeeking")}
+      </div>
     </div>
     <SideBarMenu sideBarActiveItemID={sideBarActiveItemID} />
     <SideBarFooter />
