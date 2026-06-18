@@ -22,7 +22,7 @@ export const cvUi = {
 
     // Work experience entries
     "cv.work.maqqie.title": "Junior Software Engineer",
-    "cv.work.maqqie.subtitle": "1 jaar · oktober 2025 tot oktober 2026 · bij Maqqie",
+    "cv.work.maqqie.subtitle": "9 maanden · oktober 2025 tot heden · bij Maqqie",
     "cv.work.elephant.title": "Afstudeerstage Elephant/InDordrecht",
     "cv.work.elephant.subtitle": "4 maanden · februari 2025 tot juni 2025 · bij Elephant",
     "cv.work.studentaanhuis.title": "Aan huis ICT hulp",
@@ -55,7 +55,7 @@ export const cvUi = {
 
     // Work experience entries
     "cv.work.maqqie.title": "Junior Software Engineer",
-    "cv.work.maqqie.subtitle": "1 year · October 2025 to October 2026 · at Maqqie",
+    "cv.work.maqqie.subtitle": "9 months · October 2025 to present · at Maqqie",
     "cv.work.elephant.title": "Graduation internship Elephant/InDordrecht",
     "cv.work.elephant.subtitle": "4 months · February 2025 to June 2025 · at Elephant",
     "cv.work.studentaanhuis.title": "In house IT support",
