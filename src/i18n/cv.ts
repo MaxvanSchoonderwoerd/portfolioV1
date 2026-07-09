@@ -9,6 +9,7 @@
 export const cvUi = {
   nl: {
     // Sections
+    "cv.download": "Download CV",
     "cv.profile": "Profiel",
     "cv.profileText":
       "Hey! Ik ben Max van Schoonderwoerd, software engineer met een passie voor UX-design. Ik krijg energie van het bouwen van digitale producten die niet alleen technisch sterk zijn, maar ook prettig en intuïtief in gebruik. Ik ben altijd nieuwsgierig naar hoe dingen werken, leer snel nieuwe vaardigheden en vind het leuk om oplossingen te bouwen die echt waarde toevoegen voor gebruikers.",
@@ -68,6 +69,7 @@ export const cvUi = {
   },
   en: {
     // Sections
+    "cv.download": "Download CV",
     "cv.profile": "Profile",
     "cv.profileText":
       "Hey! I'm Max van Schoonderwoerd, a software engineer with a passion for UX design. I get energy from building digital products that are not only technically solid, but also pleasant and intuitive to use. I'm always curious about how things work, learn new skills quickly, and love building solutions that add real value for users.",
