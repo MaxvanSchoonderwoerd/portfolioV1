@@ -27,6 +27,7 @@ const { work, education } = cvLayout;
         <TimeLineElement
           title={t(`${entry.key}.title`)}
           subtitle={t(`${entry.key}.subtitle`)}
+          description={t(`${entry.key}.description`)}
           highlight={"highlight" in entry && entry.highlight}
         />
       ))
@@ -48,7 +49,7 @@ const { work, education } = cvLayout;
       ))
     }
   </div>
-  
+
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">{t("cv.skills")}</div>
   </div>
