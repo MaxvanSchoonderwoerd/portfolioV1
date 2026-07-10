@@ -55,7 +55,7 @@ export const cvUi = {
     "cv.work.rox.subtitle":
       "6 maanden · september 2023 tot februari 2024 · bij ROX",
     "cv.work.rox.description":
-      "webdevelopment stage bij ROX voor 3de jaar CMGT",
+      "Als stagiair bij ROX heb ik een half jaar fulltime als web developer meegelopen. Ik heb bij ROX zowel back-end, front-end als designwerk geleverd bij het maken van een intern SaaS-product. Ik heb geleerd om communicatief professioneel te werken en om mijn tijd effectief in te plannen. Op technisch vlak heb ik veel geleerd over PHP Laravel, TypeScript React en Redux, en dev-ops technologieën zoals Docker, Vite en ESLint. Daarnaast heb ik geautomatiseerde tests geschreven met PHPUnit.",
 
     // Education entries
     "cv.edu.minor.title": "Minor Interface & User Experience Design",
@@ -109,7 +109,7 @@ export const cvUi = {
     "cv.work.rox.subtitle":
       "6 months · September 2023 to February 2024 · at ROX",
     "cv.work.rox.description":
-      "Web development internship at ROX for the third year of CMGT.",
+      "As an intern at ROX I worked full-time as a web developer for six months. At ROX I delivered back-end, front-end, and design work on the creation of an internal SaaS product. I learned to communicate professionally and to plan my time effectively. On the technical side, I learned a lot about PHP Laravel, TypeScript React and Redux, and dev-ops technologies such as Docker, Vite, and ESLint. I also wrote automated tests with PHPUnit.",
 
     // Education entries
     "cv.edu.minor.title": "Minor Interface & User Experience Design",
