@@ -25,7 +25,7 @@ export const cvUi = {
     //maqqie
     "cv.work.maqqie.title": "Junior Software Engineer",
     "cv.work.maqqie.subtitle":
-      "9 maanden · oktober 2025 tot heden · bij Maqqie",
+      "1 jaar · oktober 2025 tot oktober 2026 · bij Maqqie",
     "cv.work.maqqie.description":
       "Als Junior Software Engineer bij Maqqie draag ik bij aan de ontwikkeling van een nieuwe backoffice applicatie waarmee intern het Maqqie platform kan geconfigureerd en beheerd worden. Daarbij werk ik samen met andere software engineers en verschillende afdelingen zoals legal, support, en customer success.\n\nIn deze rol ontwikkel ik mij tot fullstack software engineer. Ik ben zonder ervaring met Kotlin en Spring Boot begonnen en draag inmiddels dagelijks bij aan de back-end productie code binnen een grote codebase. Daarnaast werk ik met Vue.js en TypeScript aan de frontend.\n\nNaast mijn technische ontwikkeling verdiep ik mij in het domein van arbeidsrecht en de uitzendbranche. Door het volgen van de SEU Backoffice Professional training heb ik inzicht gekregen in de wet- en regelgeving achter de software die ik help bouwen.\n\nDeze ervaring leert mij om snel nieuwe technologieën op te pakken, complexe domeinkennis eigen te maken en continu te blijven leren om betere software te bouwen.",
 
@@ -83,7 +83,7 @@ export const cvUi = {
 
     // Work experience entries
     "cv.work.maqqie.title": "Junior Software Engineer",
-    "cv.work.maqqie.subtitle": "9 months · October 2025 to present · at Maqqie",
+    "cv.work.maqqie.subtitle": "1 year · October 2025 to October 2026 · at Maqqie",
     "cv.work.maqqie.description":
       "As a Junior Software Engineer at Maqqie, I contribute to the development of a new back office application that lets the Maqqie platform be configured and managed internally. In doing so, I work together with other software engineers and various departments such as legal, support, and customer success.\n\nIn this role I'm growing into a full-stack software engineer. I started with no experience in Kotlin and Spring Boot, and I now contribute to the back-end production code within a large codebase on a daily basis. Alongside that, I work with Vue.js and TypeScript on the frontend.\n\nBeyond my technical development, I'm deepening my knowledge of the domain of labour law and the temporary staffing industry. Through the SEU Backoffice Professional training I gained insight into the laws and regulations behind the software I help build.\n\nThis experience is teaching me to quickly pick up new technologies, master complex domain knowledge, and keep learning continuously in order to build better software.",
 
